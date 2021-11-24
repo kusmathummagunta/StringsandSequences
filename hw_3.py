@@ -36,7 +36,6 @@ def cost(a, b):
         return -3
 
 def generateString(n):
-    # Generate a string of size n from the alphabet
     alphabet = ['A', 'C', 'G', 'T']
     return ''.join(random.choice(alphabet) for i in range(n))
 
@@ -124,12 +123,12 @@ for N in N_values:
     print("Average space taken for" ,N ,":",spaceTaken / iterations,"\n")
  
 
-# df=pd.DataFrame(temptime ,columns=["N","1","2","3","4","5","6","7","8","9","10"])
-# df1 = pd.DataFrame(tempspace,columns=["N","1","2","3","4","5","6","7","8","9","10"])
-# df.plot(x="N", y=["1","2","3","4","5","6","7","8","9","10"], kind="bar",title ="Timegraph",ylabel="Time")
-# df1.plot(x="N", y=["1","2","3","4","5","6","7","8","9","10"], kind="bar",title ="Spacegraph",ylabel="Space")
+df=pd.DataFrame(temptime ,columns=["N","1","2","3","4","5","6","7","8","9","10"])
+df1 = pd.DataFrame(tempspace,columns=["N","1","2","3","4","5","6","7","8","9","10"])
+df.plot(x="N", y=["1","2","3","4","5","6","7","8","9","10"], kind="bar",title ="Timegraph",ylabel="Time")
+df1.plot(x="N", y=["1","2","3","4","5","6","7","8","9","10"], kind="bar",title ="Spacegraph",ylabel="Space")
 plt.plot(N_values,avgtimelist,'o-k', color='black')
-#plt.plot(N_values,avgspacelist,'o-k', color='red',label="space")
+plt.plot(N_values,avgspacelist,'o-k', color='red',label="space")
 plt.show()
     
 
